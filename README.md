@@ -582,3 +582,6 @@ JavaScript es un lenguaje con muchas excepciones, por ello es difícil de aprend
 
 ## Async y await
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEwODg3MTA0MDldfQ==
+-->
