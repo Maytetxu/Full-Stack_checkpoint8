@@ -32,7 +32,7 @@ Las declaraciones para bucles proporcionadas en JavaScript son:
 
 #### **1. Bucle For**
 
-El bucle `for` es como poner un temporizador: sabes exactamente cuántas veces quieres que algo suceda. Es súper organizado y predecible, lo que lo hace perfecto cuando trabajas con arrays o necesitas contar cosas. &#x20;
+El bucle `for` es como poner un temporizador: sabes exactamente cuántas veces quieres que algo suceda. Es súper organizado y predecible, lo que lo hace perfecto cuando trabajas con arrays o necesitas contar cosas. 
 
 ```javascript
 for (var i = 0; i < 5; i++) {
@@ -127,7 +127,9 @@ En este ejemplo, la variable `numero` se utiliza para llevar un registro del nú
 
 #### **6. Método forEach**
 
-Considerada una forma de bucle más moderna para trabajar con colecciones:&#x20;
+<img width="1212" height="532" alt="forEach" src="https://github.com/user-attachments/assets/eb39406e-4300-4a6f-98eb-5b792487634b" />
+
+Considerada una forma de bucle más moderna para trabajar con colecciones:
 
 * **Ejecuta** una función para cada elemento del array.
 * **Proporciona** tanto el valor del elemento como el índice como parámetros.
@@ -136,13 +138,11 @@ Considerada una forma de bucle más moderna para trabajar con colecciones:&#x20;
 
 La sintaxis básica de un bucle `forEach` en JavaScript es la siguiente:
 
-{% code overflow="wrap" %}
 ```javascript
 colección.forEach((elemento) => {
 // Código a ejecutar para cada elemento de la colección
 });
 ```
-{% endcode %}
 
 Vamos a verlo con un ejemplo simple donde se utilizamos un bucle `forEach` para iterar sobre un array de números:
 
@@ -176,9 +176,8 @@ Es importante mencionar que el método `forEach` no retorna un array nuevo. Este
 
 #### **7. Break**
 
-La instrucción _break_ en JavaScript **representa un alto completo en el bucle.** Es decir, cuando el programa se encuentra con esta palabra, interpreta que debe detener el bucle actual. Esta palabra se usa normalmente junto al condicional _if._ Entonces, podemos definir que **si una variable llega a ser determinado valor, el bucle se detiene.** **Después de leer&#x20;**_**break,**_**&#x20;el programa pasa a leer la siguiente línea de código de nuestro archivo.**
+La instrucción _break_ en JavaScript **representa un alto completo en el bucle.** Es decir, cuando el programa se encuentra con esta palabra, interpreta que debe detener el bucle actual. Esta palabra se usa normalmente junto al condicional _if._ Entonces, podemos definir que si una variable llega a ser determinado valor, el bucle se detiene. Después de leer **break,** el programa pasa a leer la siguiente línea de código de nuestro archivo.
 
-{% code overflow="wrap" %}
 ```javascript
 function comprobarBreak(x) {
 var i = 0;
@@ -189,13 +188,11 @@ i++;
 return i * x;
 }
 ```
-{% endcode %}
 
 #### **8. Continue**
 
 La instrucción _continue_ en JavaScript es menos severa que la instrucción _break._ Esta nos permite, en vez de terminar el bucle, **saltar una parte de su función.** De este modo, esa sección no será modificada por el bucle, pero este podrá seguir con la siguiente iteración. Entonces, cuando el programa se topa con un _continue,_ **este interpreta que debe ignorar lo que hay desde esta palabra hasta el final del bucle actual.** Después de ignorarlo, sigue con la siguiente iteración. Es decir, el bucle no finaliza, pero sí se modifica su función, pues ya no ejecutará la parte final de su comportamiento inicial.
 
-{% code overflow="wrap" %}
 ```javascript
 i = 0;
 n = 0;
@@ -207,7 +204,6 @@ while (i < 5) {
   n += i;
 }
 ```
-{% endcode %}
 
 #### **9. Switch**
 
@@ -232,14 +228,13 @@ switch (expresión) {
 }
 ```
 
-Switch-case puede considerarse tanto un condicional, como una estructura de control de flujo, es por ello que lo mencionamos en este apartado.&#x20;
+Switch-case puede considerarse tanto un condicional, como una estructura de control de flujo, es por ello que lo mencionamos en este apartado. 
 
 * **Control de flujo:** Permite al programa tomar decisiones y cambiar su camino de ejecución según el estado de los datos, actuando como una alternativa más limpia a múltiples bloques `if...else if`.
-* **Condicional:** Funciona comparando si el valor de la expresión coincide estrictamente (===) con el valor de cada `case`&#x20;
+* **Condicional:** Funciona comparando si el valor de la expresión coincide estrictamente (===) con el valor de cada `case`. 
 
-Podremos verlo con claridad en el siguiente ejemplo:&#x20;
+Podremos verlo con claridad en el siguiente ejemplo:
 
-{% code overflow="wrap" %}
 ```javascript
 const mascota = "perro";
  
@@ -264,9 +259,9 @@ switch (mascota) {
     break;
 }
 ```
-{% endcode %}
 
-La siguiente tabla muestra un resumen de los bucles e instrucciones de control de flujo:&#x20;
+La siguiente tabla muestra un resumen de los bucles e instrucciones de control de flujo:
+
 
 | Tipo de bucle o instrucción       | ¿Qué hace?                                                                                                                             |
 | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -315,7 +310,7 @@ Antes de la llegada de ES6, las declaraciones `var` eran las que mandaban. Sin e
 
 Antes de explicar estas tres formas de declarar una variable, es necesario comprender lo que significa "hoisting" (elevar, en inglés).
 
-Hoisting es cuando las funciones y las variables se almacenan en memoria para un contexto de ejecución antes de ejecutar nuestro código.&#x20;
+Hoisting es cuando las funciones y las variables se almacenan en memoria para un contexto de ejecución antes de ejecutar nuestro código. 
 
 Hoisting en JavaScript, nos permite acceder a funciones y variables antes de que hayan sido creadas.
 
@@ -325,7 +320,7 @@ En el caso de `var` el valor se inicializa a indefinido (undefined) durante la f
 
 <figure><img src=".gitbook/assets/var_const_let2.png" alt=""><figcaption><p>Declaración de variables, explicado con manzanas</p></figcaption></figure>
 
-#### &#x20;**`var`** <a href="#mbito-de-var" id="mbito-de-var"></a>
+#### **`var`** <a href="#mbito-de-var" id="mbito-de-var"></a>
 
 La declaración de variables usando `var` fue la forma original de declarar variables en JavaScript, lo que lo hace compatible con todas las versiones del lenguaje. En la actualidad, ésto tiene algunas limitaciones importantes, especialmente en términos de ámbito.
 
@@ -346,7 +341,7 @@ Para entenderlo mejor, mira el siguiente ejemplo.
     console.log(hola); // error: hola is not defined
 ```
 
-Esto ocurre, porque, en este ejemplo, `var` tiene un ámbito local y no está disponible fuera de la función.&#x20;
+Esto ocurre, porque, en este ejemplo, `var` tiene un ámbito local y no está disponible fuera de la función. 
 
 En términos de declaraciones, `var` se puede volver a declarar, pero `let` y `const` no. Entonces, cuando usa `var`, puede hacer algo como esto:
 
@@ -357,7 +352,7 @@ var greeting = "Hello, hello, everyone";
 
 #### **`let`** <a href="#let" id="let"></a>
 
-`let` es ahora preferible para la declaración de variables. No es una sorpresa, ya que es una mejora de las declaraciones con `var`. También resuelve el problema con `var` que acabamos de describir.&#x20;
+`let` es ahora preferible para la declaración de variables. No es una sorpresa, ya que es una mejora de las declaraciones con `var`. También resuelve el problema con `var` que acabamos de describir. 
 
 **Ámbito de** **`let`**
 
@@ -396,25 +391,21 @@ Al igual que `var`,  una variable declarada con `let` puede ser actualizada dent
 
 Las variables declaradas con `const` mantienen valores constantes. Las declaraciones `const` mantienen similitudes con las declaraciones `let`.
 
-Las declaraciones `const` tienen un ámbito de bloque. Al igual que las declaraciones `let`, ya que solo se puede acceder a las declaraciones `const` dentro del bloque en el que fueron declaradas.&#x20;
+Las declaraciones `const` tienen un ámbito de bloque. Al igual que las declaraciones `let`, ya que solo se puede acceder a las declaraciones `const` dentro del bloque en el que fueron declaradas. 
 
 Esto significa que `const` _no puede modificarse ni volver a declararse_. Tampoco se puede actualizar. Así que si declaramos una variable con `const`, no podemos hacer esto:
 
-{% code overflow="wrap" %}
 ```javascript
 const saludar = "dice Hola";
 saludar = "dice Hola tambien";// error: Assignment to constant variable. 
 ```
-{% endcode %}
 
-Ni tampoco esto:&#x20;
+Ni tampoco esto: 
 
-{% code overflow="wrap" %}
 ```javascript
 const saludar = "dice Hola";
 const saludar = "dice Hola tambien";// error: Identifier 'saludar' has already been declared
 ```
-{% endcode %}
 
 **Buenas prácticas**
 
@@ -447,62 +438,52 @@ Si tu función necesita tener autorreferencia en algún punto (por ejemplo, recu
 
 Estructura:
 
-{% code overflow="wrap" %}
 ```javascript
 const nombreFuncion = (parametros) => {
  // cuerpo de la función
  return valor;
 };
 ```
-{% endcode %}
 
 Tipos de **arrow function** en diferentes ámbitos:
 
 1\. **Función sin parámetros**
 
-{% code overflow="wrap" %}
 ```javascript
 const sayHello = () => {
  return 'Hello!';
 };
 console.log(sayHello()); // 'Hello!'
 ```
-{% endcode %}
 
 2\. **Función con un solo parámetro**
 
 Si hay un solo parámetro, se pueden omitir los paréntesis:
 
-{% code overflow="wrap" %}
 ```javascript
 const square = x => {
  return x * x;
 };
 console.log(square(4)); // 16 
 ```
-{% endcode %}
 
 3\. **Función con múltiples parámetros**
 
-{% code overflow="wrap" %}
 ```javascript
 const add = (a, b) => {
  return a + b;
 };
 console.log(add(3, 5)); // 8
 ```
-{% endcode %}
 
 4\. **Función con cuerpo conciso**
 
 Si el cuerpo de la función contiene una sola expresión, se pueden omitir las llaves y el return:
 
-{% code overflow="wrap" %}
 ```javascript
 const multiply = (a, b) => a * b;
 console.log(multiply(2, 3)); // 6
 ```
-{% endcode %}
 
 **Características de las funciones de flecha:**
 
@@ -513,7 +494,6 @@ console.log(multiply(2, 3)); // 6
 
 * _**Contexto this**_: En funciones tradicionales, el valor de this puede cambiar dependiendo de cómo se invoque la función. Como se ha indicado en líneas anteriores, en funciones de flecha, this está ligado al contexto en el que se definió la función.
 
-{% code overflow="wrap" %}
 ```javascript
 function TraditionalFunction() {
  this.value = 1;
@@ -532,16 +512,12 @@ function ArrowFunction() {
 new TraditionalFunction();
 new ArrowFunction();
 ```
-{% endcode %}
-
-&#x20;
 
 * **No pueden ser usadas como constructores**: Las funciones de flecha no pueden ser usadas con new para crear instancias. Intentar hacerlo resultará en un error.
 * **No tienen acceso a argumentos**: Las funciones de flecha no tienen su propio objeto-argumento. Para acceder a los argumentos, se debe usar el operador rest (...args).
 
 Ejemplo:
 
-{% code overflow="wrap" %}
 ```javascript
 // Función tradicional
 function Person() {
@@ -562,26 +538,247 @@ function Person() {
 }
 new Person(); // El valor de `this` es correcto y se refiere a la insta
 ```
-{% endcode %}
 
-## Deconstrucción de variables
+## Deconstrucción de objetos y variables
 
-La clave está en la sintaxis. La asignación se encierra en corchetes a ambos lados del igual, como en el ejemplo.&#x20;
+<img width="686" height="386" alt="deconstrucción_variables2" src="https://github.com/user-attachments/assets/8cb9fdac-db18-461b-a85f-c1b3fb458f8f" />
 
+Una de las características introducidas en las recientes actualizaciones de JavaScript es la deconstrucción (o deconstruction) de objetos y variables. La deconstrucción permite extraer propiedades de objetos y arreglos de manera más concisa y legible. A continuación, exploraremos en detalle qué es la deconstrucción de objetos, cómo se usa y algunos casos prácticos.
+
+**¿Qué es la deconstrucción de objetos?**
+La deconstrucción de objetos es una sintaxis que permite desempacar valores de arreglos o propiedades de objetos en variables distintas. Esto se hace utilizando una sintaxis similar a la de creación de objetos y arreglos. Veamos un ejemplo básico:
+
+```javascript
+const persona = {
+  nombre: 'Juan',
+  edad: 30,
+  ciudad: 'Mazatlán'
+};
+
+const { nombre, edad, ciudad } = persona;
+
+console.log(nombre); // Juan
+console.log(edad);   // 30
+console.log(ciudad); // Mazatlán
+```
+En este ejemplo, el objeto persona tiene tres propiedades: nombre, edad y ciudad. Utilizando la sintaxis de deconstrucción, creamos tres variables (nombre, edad y ciudad) y les asignamos los valores correspondientes del objeto persona.
+
+**La deconstrucción permite asignar valores por defecto**
+
+Es posible asignar valores por defecto a las variables si la propiedad que se intenta deconstruir no existe en el objeto. Esto se hace utilizando el operador `=`.
+
+```javascript
+const persona = {
+  nombre: 'Juan',
+  edad: 30
+};
+
+const { nombre, edad, ciudad = 'Desconocida' } = persona;
+
+console.log(ciudad); // Desconocida
+
+```
+En este ejemplo, la propiedad ciudad no existe en el objeto persona, por lo que la variable ciudad toma el valor por defecto 'Desconocida'.
+
+**Renombrar variables**
+
+La deconstrucción de objetos también nos permite renombrar las variables mientras se deconstruye un objeto utilizando la sintaxis propiedad: nuevoNombre.
+
+```javascript
+const persona = {
+  nombre: 'Juan',
+  edad: 30
+};
+
+const { nombre: nombreCompleto, edad: años } = persona;
+
+console.log(nombreCompleto); // Juan
+console.log(años);           // 30
+
+```
+En este ejemplo, la propiedad nombre se deconstruye en la variable nombreCompleto y edad en años.
+
+**Deconstrucción en objetos anidados**
+
+La deconstrucción también puede ser utilizada en objetos anidados, permitiendo extraer propiedades de objetos dentro de otros objetos.
+```javascript
+const persona = {
+  nombre: 'Juan',
+  direccion: {
+    ciudad: 'Mazatlán',
+    pais: 'México'
+  }
+};
+
+const { nombre, direccion: { ciudad, pais } } = persona;
+
+console.log(ciudad); // Mazatlán
+console.log(pais);   // México
+
+```
+En este ejemplo, extraemos ciudad y pais del objeto direccion que está anidado dentro del objeto persona.
+
+**Deconstrucción con parámetros de función**
+La deconstrucción de objetos es especialmente útil cuando se trabaja con parámetros de funciones, permitiendo pasar objetos completos y deconstruir sus propiedades directamente al establecer la función y sus parámetros (*firma de la función*).
+
+```javascript
+function mostrarInformacion({ nombre, edad, ciudad }) {
+  console.log(`Nombre: ${nombre}`);
+  console.log(`Edad: ${edad}`);
+  console.log(`Ciudad: ${ciudad}`);
+}
+
+const persona = {
+  nombre: 'Juan',
+  edad: 30,
+  ciudad: 'Mazatlán'
+};
+
+mostrarInformacion(persona);
+```
+En este ejemplo, la función mostrarInformacion recibe un objeto y deconstruye sus propiedades directamente en los parámetros.
+
+**Deconstrucción para el intercambio de variables**
+
+Otros lenguajes de programación permiten intercambiar valores de una manera mucho más eficiente. Las versiones modernas de JavaScript permiten algo muy parecido. Solo hay que recordar poner los valores entre corchetes a ambos lados de la asignación, como veremos en el ejemplo siguiente. 
+```javascript
+let a = 1, b = 2;
+[a, b] = [b, a];
+
+console.log(a); // 2
+console.log(b); // 1
+```
+Esto es muy útil en diversas situaciones. Una de las principales es al implementar algoritmos. Uno de los procesos más comunes al implementar algoritmos de fusión, ordenación rápida o cualquier otro algoritmo avanzado, es la capacidad de intercambiar valores de variables sin necesidad de construir variables. Esto es muy difícil de lograr. Afortunadamente, gracias a esta funcionalidad en las versiones modernas de JavaScript, podemos hacerlo de una manera mucho más eficiente que con una sola línea de código.
+
+**Deconstrucción en la importación de módulos**
+
+Otro uso práctico de la deconstrucción es en la importación de módulos. Cuando importamos varios elementos de un módulo, podemos deconstruirlos directamente en la declaración de importación.
+
+```javascript
+import { useState, useEffect } from 'react';
+
+// Uso de useState y useEffect
+
+```
+En este ejemplo, deconstruimos useState y useEffect directamente desde el módulo 'react'.
+
+**Deconstrucción en bucles**
+
+La deconstrucción puede ser utilizada en ciclos para iterar sobre arreglos de objetos y extraer sus propiedades de manera concisa.
+
+```javascript
+
+
+const personas = [
+  { nombre: 'Juan', edad: 30 },
+  { nombre: 'Ana', edad: 25 },
+  { nombre: 'Luis', edad: 28 }
+];
+
+for (const { nombre, edad } of personas) {
+  console.log(`Nombre: ${nombre}, Edad: ${edad}`);
+}
+
+```
+En este ejemplo, iteramos sobre un arreglo de objetos personas y deconstruimos nombre y edad directamente en el ciclo for...of.
+
+**Deconstrucción y rest operator**
+
+La deconstrucción se puede combinar con el operador rest (...) para capturar el resto de las propiedades de un objeto en una nueva variable. En este ejemplo, nombre y edad se extraen del objeto persona, y el resto de las propiedades (ciudad y profesion) se agrupan en el objeto resto:
+
+```javascript
+const persona = {
+  nombre: 'Juan',
+  edad: 30,
+  ciudad: 'Mazatlán',
+  profesion: 'Ingeniero'
+};
+
+const { nombre, edad, ...resto } = persona;
+
+console.log(nombre); // Juan
+console.log(edad);   // 30
+console.log(resto);  // { ciudad: 'Mazatlán', profesion: 'Ingeniero' }
+```
+
+**Deconstrucción de Arrays**
+
+La deconstrucción también funciona con arrays, como en este ejemplo:
+
+```javascript
+const [primero, segundo, ...resto] = [1, 2, 3, 4, 5];
+console.log(primero); // 1
+console.log(segundo); // 2 console.log(resto);   // [3, 4, 5]
+```
+
+**Ventajas de la deconstrucción de objetos:**
+
+Como ya hemos visto, la deconstrucción tiene múltiples usos y ventajas, tales como: 
+
+* Código más limpio y legible: La deconstrucción reduce la cantidad de líneas de código necesarias para extraer propiedades de un objeto.
+* Asignación simultánea: Permite asignar múltiples variables en una sola línea, haciendo el código más compacto.
+Valores por defecto: La deconstrucción permite asignar valores por defecto a variables si la propiedad no existe en el objeto.
+* Renombrado de variables: Se pueden renombrar las variables al deconstruir, lo que es útil para evitar conflictos de nombres.
+
+En resumen, la **deconstrucción de objetos en JavaScript** es una característica poderosa que mejora la legibilidad y eficiencia del código. Permite extraer propiedades de objetos de manera concisa, asignar valores por defecto, renombrar variables y trabajar con objetos anidados y parámetros de funciones. Su uso adecuado puede simplificar considerablemente la manipulación de datos, especialmente en aplicaciones complejas y al trabajar con APIs.
 
 
 ## Operador de extensión en JS
 
+<img width="686" height="386" alt="spread" src="https://github.com/user-attachments/assets/f0fc5698-cd56-4b1f-937f-b756e5bff57f" />
+
+Producto también de las nuevas versiones de JavaScript, es el operador de extensión o spread operator, del que hablaremos en este apartado. 
+
+El spread operator que incorpora ECMAScript 6 en JavaScript es un operador que simplifica la recogida de valores en una estructura de datos. Su representa con tres puntos: ...
+
+La definición que nos da Mozilla Developer Network es: "Spread syntax allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected."
+
+Lo que quiere decir que este operador distribuye los elementos dentro de un iterable (cadena de texto, array o cualquier cosa que se pueda recorrer) dentro de un receptor. En otras palabras se usa para expandir objetos iterables como *arrays* en elementos individuales y nos permite fusionar, copiar o pasar elementos por parámetro en funciones sin tener que iterar a través de ellos, sin que se modifique el objeto o variables originales. Veamos las funcionalidades principales.
+
+**Concatenar Arrays**
+```javascript
+const coleccion1 = [1, 2, 3];
+const coleccion2 = [4, 5, 6];
+const concatenatedArr = [...coleccion1, ...coleccion2];
+console.log(concatenatedArr) // Resultado: [1, 2, 3, 4, 5, 6]
+
+```
+**Copiar estructuras de datos**
+```javascript
+const original = [1, 2, 3];
+const copia = [...original];
+
+``` 
+**Pasar argumentos a funciones**
+```javascript
+const numeros = [15, 5, 7, 2, 9];
+const minimo = Math.min(...numeros);
+console.log(minimo) // 2
+```
+**Fusionar objetos**
+```javascript
+const obj1 = {a: 1, b: 2};
+const obj2 = {c: 3, d: 4};
+const combinado = {...obj1, ...obj2};
+console.log(combinado) // {a: 1, b: 2, c: 3, d: 4}
+```
+
 ## Programación orientada a objetos con JS
+
+Históricamente un programa era visto como un conjunto de procesos lógicos que, a partir de unos datos de entrada, se procesaban y producían unos datos de salida. La programación orientada a objetos utiliza “objetos” (estructuras de
+datos y métodos) y sus interacciones para diseñar aplicaciones. En este paradigma, cada objeto debe ser visto como una entidad con una serie de propiedades que le hacen único y que es responsable de realizar una serie de procesos
+(métodos) para los que ha sido creado, basándose un patrón o tipo común para todos los objetos de su misma clase.
+
+JavaScript implementa los cuatro principios básicos de la programación orientada a objetos: abstracción, encapsulación, herencia y polimorfismo, pero, a diferencia de otros lenguajes como Java, es posible programar sin necesidad de utilizar exclusivamente estas características.
 
 Hasta hace unos años, JavaScript NO era un lenguaje orientado a objetos, por tanto no tenía clases, y como cada función en JavaScript es un objeto y los objetos pueden tener atributos, los desarrolladores comenzaron a agregar atributos a las funciones como si fueran objetos normales, lo que les permitió tratarlas como una clase.
 
 JavaScript es un lenguaje con muchas excepciones, por ello es difícil de aprender para muchas personas, pero si entendemos que prácticamente todo en JavaScript es un objeto al que podemos añadir atributos, funciones y demás, entonces es mucho más sencillo entender cómo funciona.
 
+
+
+
 ## Qué es una promesa en JavaScript
 
 ## Async y await
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODg3MTA0MDldfQ==
--->
