@@ -6,7 +6,7 @@ description: Bucles, variables, arrow function, POO y API's query
 
 ## Tipos de bucles en JavaScript
 
-<figure><img src=".gitbook/assets/loops_2.png" alt=""><figcaption></figcaption></figure>
+<p><figure><img src=".gitbook/assets/loops_2.png" alt=""><figcaption></figcaption></figure></p>
 
 ¿Alguien recuerda el famoso castigo de las novelas de Charles Dickens donde los estudiantes tenían que escribir líneas repetidamente en una pizarra? Imaginemos que la orden "escribe esta frase 100 veces" se pudiese hacer automáticamente. Eso es exactamente lo que hacen los bucles para código.
 
@@ -127,7 +127,7 @@ En este ejemplo, la variable `numero` se utiliza para llevar un registro del nú
 
 #### **6. Método forEach**
 
-<img width="1212" height="532" alt="forEach" src="https://github.com/user-attachments/assets/eb39406e-4300-4a6f-98eb-5b792487634b" />
+<p><img width="1212" height="532" alt="forEach" src="https://github.com/user-attachments/assets/eb39406e-4300-4a6f-98eb-5b792487634b" /></p>
 
 Considerada una forma de bucle más moderna para trabajar con colecciones:
 
@@ -298,7 +298,7 @@ Siguiendo estas buenas prácticas en los bucles en JavaScript, podemos escribir 
 
 ## `const`, `let` y `var` Diferencias y usos
 
-<figure><img src=".gitbook/assets/var_const_let.jpg" alt=""><figcaption></figcaption></figure>
+<p><figure><img src=".gitbook/assets/var_const_let.jpg" alt=""><figcaption></figcaption></figure></p>
 
 Una de las características que llegaron con ES6 es la adición de `let` y `const`, que se pueden utilizar para la declaración de variables. La pregunta es, ¿qué las hace diferentes del viejo `var` que hemos venido utilizando?.
 
@@ -318,11 +318,16 @@ El hoisting funciona de forma diferente si la declaración de la variable se rea
 
 En el caso de `var` el valor se inicializa a indefinido (undefined) durante la fase de creación. Sin embargo, en el caso de `let` y `const` el valor sólo se inicializa durante la fase de ejecución.
 
-<figure><img src=".gitbook/assets/var_const_let2.png" alt=""><figcaption><p>Declaración de variables, explicado con manzanas</p></figcaption></figure>
+<p align="center">
+  <img src=".gitbook/assets/var_const_let2.png"><br>
+  <sub>Declaración de variables, explicado con manzanas</sub>
+</p>
 
-#### **`var`** <a href="#mbito-de-var" id="mbito-de-var"></a>
+#### **`var`** 
 
 La declaración de variables usando `var` fue la forma original de declarar variables en JavaScript, lo que lo hace compatible con todas las versiones del lenguaje. En la actualidad, ésto tiene algunas limitaciones importantes, especialmente en términos de ámbito.
+
+**Ámbito de `var`**
 
 El ámbito, significa esencialmente dónde están disponibles estas variables para su uso. Las declaraciones `var` tienen un ámbito global o un ámbito de función/local.
 
@@ -358,9 +363,8 @@ var greeting = "Hello, hello, everyone";
 
 Un bloque es un trozo de código delimitado por {}. Un bloque vive entre llaves. Todo lo que está dentro de llaves es un bloque.
 
-Así que una variable declarada en un bloque con `let`  solo está disponible para su uso dentro de ese bloque, a diferencia de lo que ocurre con `var`. Permíteme explicar esto con un ejemplo:
+Así que una variable declarada en un bloque con `let`  solo está disponible para su uso dentro de ese bloque, a diferencia de lo que ocurre con `var`. A esto se le denomina *block scope*. Permíteme explicar esto con un ejemplo:
 
-{% code overflow="wrap" %}
 ```javascript
    let saludar = "dice Hola";
    let tiempos = 4;
@@ -372,19 +376,16 @@ Así que una variable declarada en un bloque con `let`  solo está disponible pa
    console.log(hola) // hola is not defined
 
 ```
-{% endcode %}
 
 En otras palabras, `let` _puede modificarse pero no volver a declararse_.
 
 Al igual que `var`,  una variable declarada con `let` puede ser actualizada dentro de su ámbito. A diferencia de `var`, una variable `let` no puede ser re-declarada dentro de su ámbito. Así que mientras esto funciona:
 
-{% code overflow="wrap" %}
+
 ```javascript
     let saludar = "dice Hola";
     saludar = "dice Hola tambien";
 ```
-{% endcode %}
-
 
 
 #### **`Const`**
@@ -417,9 +418,9 @@ Aunque el uso de la declaración de variables mediante `var` se ha convertido en
 
 ## Arrow function
 
-<figure><img src=".gitbook/assets/arrow_function.jpg" alt=""><figcaption></figcaption></figure>
+<p><figure><img src=".gitbook/assets/arrow_function.jpg" alt=""><figcaption></figcaption></figure></p>
 
-Las **funciones flecha** o **arrow functions** son uno de los aspectos más importantes que debemos aprender en JavaScript moderno. Su uso está muy extendido, y si nunca las has visto o trabajado con ellas, pueden parecer un poco intimidantes.\
+Las **funciones flecha** o **arrow functions** son uno de los aspectos más importantes que debemos aprender en JavaScript moderno. Su uso está muy extendido, y si nunca las has visto o trabajado con ellas, pueden parecer un poco intimidantes.
 Su aspecto es completamente diferente al de cualquier otro tipo de declaración de función que hayamos visto si solo has usado JavaScript puro, en versiones antiguas.
 
 Utiliza la sintáxis **=>** para definir las funciones de una manera más compacta y fácil de interpretar.
@@ -428,15 +429,11 @@ Es importante subrayar que las **arrow function son anónimas**, lo que signific
 
 Este anonimato crea algunos problemas:
 
-1. Más difíciles de depurar
+*a) Más difíciles de depurar*. Cuando obtengas un error, no serás capaz de rastrear el nombre de la función o el número de línea exacto donde ocurrió.
 
-Cuando obtengas un error, no serás capaz de rastrear el nombre de la función o el número de línea exacto donde ocurrió.
+*b) Sin autorreferencia*. Si tu función necesita tener autorreferencia en algún punto (por ejemplo, recursión, controlador de evento que necesita desvincularse), no funcionará.
 
-2\.  Sin autorreferencia
-
-Si tu función necesita tener autorreferencia en algún punto (por ejemplo, recursión, controlador de evento que necesita desvincularse), no funcionará.
-
-Estructura:
+La sintaxis de `arrow function`, como podemos observar en la imagen, integra la función (paréntesis), flecha (arrow function) y corchetes (cuerpo de la función):
 
 ```javascript
 const nombreFuncion = (parametros) => {
@@ -447,7 +444,7 @@ const nombreFuncion = (parametros) => {
 
 Tipos de **arrow function** en diferentes ámbitos:
 
-1\. **Función sin parámetros**
+1. **Función sin parámetros**
 
 ```javascript
 const sayHello = () => {
@@ -456,7 +453,7 @@ const sayHello = () => {
 console.log(sayHello()); // 'Hello!'
 ```
 
-2\. **Función con un solo parámetro**
+2. **Función con un solo parámetro**
 
 Si hay un solo parámetro, se pueden omitir los paréntesis:
 
@@ -467,7 +464,7 @@ const square = x => {
 console.log(square(4)); // 16 
 ```
 
-3\. **Función con múltiples parámetros**
+3. **Función con múltiples parámetros**
 
 ```javascript
 const add = (a, b) => {
@@ -476,7 +473,7 @@ const add = (a, b) => {
 console.log(add(3, 5)); // 8
 ```
 
-4\. **Función con cuerpo conciso**
+4. **Función con cuerpo conciso**
 
 Si el cuerpo de la función contiene una sola expresión, se pueden omitir las llaves y el return:
 
@@ -541,7 +538,7 @@ new Person(); // El valor de `this` es correcto y se refiere a la insta
 
 ## Deconstrucción de objetos y variables
 
-<img width="686" height="386" alt="deconstrucción_variables2" src="https://github.com/user-attachments/assets/8cb9fdac-db18-461b-a85f-c1b3fb458f8f" />
+<p><img width="686" height="386" alt="deconstrucción_variables2" src="https://github.com/user-attachments/assets/8cb9fdac-db18-461b-a85f-c1b3fb458f8f" /></p>
 
 Una de las características introducidas en las recientes actualizaciones de JavaScript es la deconstrucción (o deconstruction) de objetos y variables. La deconstrucción permite extraer propiedades de objetos y arreglos de manera más concisa y legible. A continuación, exploraremos en detalle qué es la deconstrucción de objetos, cómo se usa y algunos casos prácticos.
 
@@ -725,7 +722,7 @@ En resumen, la **deconstrucción de objetos en JavaScript** es una característi
 
 ## Operador de extensión en JS
 
-<img width="686" height="386" alt="spread" src="https://github.com/user-attachments/assets/f0fc5698-cd56-4b1f-937f-b756e5bff57f" />
+<p><img width="686" height="386" alt="spread" src="https://github.com/user-attachments/assets/f0fc5698-cd56-4b1f-937f-b756e5bff57f" /></p>
 
 Producto también de las nuevas versiones de JavaScript, es el operador de extensión o spread operator, del que hablaremos en este apartado. 
 
@@ -765,6 +762,9 @@ console.log(combinado) // {a: 1, b: 2, c: 3, d: 4}
 
 ## Programación orientada a objetos con JS
 
+<p><img width="1164" height="525" alt="POO_JS" src="https://github.com/user-attachments/assets/afe01f15-6832-4576-9cf7-11beaab5f78f" /></p>
+
+
 Históricamente un programa era visto como un conjunto de procesos lógicos que, a partir de unos datos de entrada, se procesaban y producían unos datos de salida. La programación orientada a objetos utiliza “objetos” (estructuras de
 datos y métodos) y sus interacciones para diseñar aplicaciones. En este paradigma, cada objeto debe ser visto como una entidad con una serie de propiedades que le hacen único y que es responsable de realizar una serie de procesos
 (métodos) para los que ha sido creado, basándose un patrón o tipo común para todos los objetos de su misma clase.
@@ -775,10 +775,295 @@ Hasta hace unos años, JavaScript NO era un lenguaje orientado a objetos, por ta
 
 JavaScript es un lenguaje con muchas excepciones, por ello es difícil de aprender para muchas personas, pero si entendemos que prácticamente todo en JavaScript es un objeto al que podemos añadir atributos, funciones y demás, entonces es mucho más sencillo entender cómo funciona.
 
+En POO hay varios conceptos básicos, que de forma muy esquemática, son:
+
+*Clase*: Es el molde, o el patrón que define qué propiedades y métodos va a tener un objeto que sea una instancia de la esta clase. Primero hay que **instanciar** la clase para convertirla en un objeto. La instanciación se hace con el constructor `this`. Una vez que es un objeto, se puede hacer lo que se necesite con él. 
+
+<p><img width="777" height="536" alt="class-object" src="https://github.com/user-attachments/assets/806446d7-df6b-4aa4-bb6e-daf44f48158f" /></p>
 
 
+```javascript
+// Definición de la clase
+ class Persona {
+ constructor(nombre, edad) {
+ this.nombre = nombre;
+ this.edad = edad;
+ }
+
+// Método de la clase
+
+ saludar() {
+ console.log(`Hola, me llamo ${this.nombre} y tengo ${this.edad} años.`);
+
+ }
+}
+
+ // Creación de objetos
+
+const persona1 = new Persona('Juan', 30);
+const persona2 = new Persona('Ana', 25);
+
+// Uso de los métodos del objeto
+persona1.saludar(); // Hola, me llamo Juan y tengo 30 años.
+persona2.saludar(); // Hola, me llamo Ana y tengo 25 años.
+
+```
+
+*Herencia*: Nos permite crear una subclase(clase hija) que posea automáticamente las propiedades y métodos de la superclase o clase padre. De forma que reutilizamos código.
+
+ ```javascript
+ class Animal {
+ constructor(nombre) {
+ this.nombre = nombre;
+ }
+
+ hacerSonido() {
+ console.log('El animal hace un sonido');
+ }
+}
+
+```
+  
+*Polimorfismo*: Podemos ejecutar un mismo método en objetos distintos sin importar qué tipo tienen porque en cada caso se ejecuta la implementación correcta.
+
+```javascript
+// Clase base
+
+class Vehiculo {
+ constructor(marca) {
+ this.marca = marca;
+ }
+
+ acelerar() {
+ console.log('El vehículo está acelerando');
+ }
+}
+
+// Clase derivada
+
+class Coche extends Vehiculo {
+ acelerar() { 
+ console.log('El coche está acelerando');
+ }
+}
+```
+
+*Encapsulamiento*: Es la capacidad de definir propiedades y métodos privados dentro de un objeto. Que serán únicamente accesibles desde dentro de la función donde se han definido
+
+```javascript
+class Student extends Person {
+  #year;
+
+  constructor(name, year) {
+    super(name);
+    this.#year = year;
+  }
+
+  introduceSelf() {
+    console.log(
+      `¡Hola! me llamo ${this.name} y estoy en el año ${this.#year}.`,
+    );
+  }
+
+  canStudyArchery() {
+    return this.#year > 1;
+  }
+}
+```
+En este ejemplo `year` es una propiedad de dato privada. Podemos crear un objeto Student que puede acceder a la propiedad #year internamente, sin embargo, si algún código que se encuentre afuera de la clase intenta acceder a la propiedad #year, el navegador lanzará un error. Las propiedades de datos privadas deben ser declaradas en la propia declaración de la clase y sus nombres deben empezar con #.
+
+**Ejes esenciales del desarrollo actual**
+
+La POO en JavaScript no se trata solo de crear estructuras, sino de aplicar *buenas prácticas* para que el código sea escalable y fácil de mantener.
+
+- Módulos (ES Modules): Esenciales para la arquitectura moderna. Permiten dividir el código en múltiples archivos (usando import y export), organizando las clases de manera modular y facilitando el trabajo en equipo.
+- Patrones de diseño: La aplicación de principios como SOLID ayuda a crear software más robusto y preparado para el crecimiento.
+- Integración de Paradigmas: Un entorno moderno exige saber cuándo usar orientación a objetos y cuándo optar por programación funcional, logrando un código mucho más limpio.
 
 ## Qué es una promesa en JavaScript
 
+<p><img width="597" height="288" alt="promesas_2" src="https://github.com/user-attachments/assets/33afcdea-ebf2-4d94-aba5-2c9b13b100cb" /></p>
+
+Una promesa es un objeto que representa un valor que puede que esté disponible «ahora», en un «futuro» o que «nunca» lo esté. Como no se sabe cuándo va a estar disponible, todas las operaciones dependientes de ese valor, tendrán que posponerse en el tiempo. A esto se denomina *programación asíncrona*.
+
+El uso de promesas facilita, en buena medida, el control de flujos de datos asíncronos en una aplicación.
+
+Una de las formas más comunes de usar promesas es al comunicarnos con API externas y elegir qué elementos de tu página o aplicación se cargarán de inmediato y cuáles tardarán un poco más.
+
+La convención más común es usar `resolve` y `reject`. Esto significa que se espera que una promesa funcione correctamente o que presente algún tipo de error o problema. Al crear una promesa, le indicamos al programa que recibirá una respuesta: una respuesta exitosa (si se comunica con una API, recibirá los datos y podrá gestionarlos); o, si hay un error, le devolveremos un error y le indicaremos cómo solucionarlo. En otras palabras, las promesas esperan éxitos y fracasos en los posibles resultados.
+
+JavaScript se basa en la comunicación con servicios externos, ya sean bases de datos, API de backend o cualquier otro componente externo a la aplicación. Todos los frameworks, como React, Angular y View, obtienen sus datos comunicándose con servicios externos. Por lo tanto, el uso de herramientas como las promesas es fundamental para garantizar que este proceso se desarrolle de la manera más fluida posible.
+
+Es crucial comprender cómo funciona una promesa y qué componentes necesita para su correcto funcionamiento.
+
+La promesa en sí misma no aporta mucho; no se muestra directamente en pantalla, sino que se recibe como resultado un objeto de promesa. Luego, hay que procesarla. Debemos especificar qué hacer con una respuesta exitosa, pero también qué hacer en caso de fallo. 
+
+La sintaxis básica podría ser la siguiente: 
+
+```javascript
+miPromesa
+  .then((mensaje) => {
+    console.log(mensaje); // Imprime el éxito
+  })
+  .catch((error) => {
+    console.error(error); // Imprime el error
+  });
+
+```
+
+**Métodos de las promesas en JavaScript**
+
+Aquí están algunos de los métodos más comunes que puedes utilizar:
+
+**`.then()`** : Este método se utiliza para manejar el resultado exitoso de una promesa. Recibe una función que se ejecutará cuando la promesa se resuelva con éxito y puede recibir el resultado como argumento.
+**`.catch()`** : Se utiliza para manejar errores que puedan ocurrir durante la ejecución de la promesa. Puedes encadenar .catch() después de .then() para manejar errores específicos.
+
+Veamos un ejemplo donde se ejecutan los dos anteriores. Observemos que la sintaxis utiliza **`arrow function`**: 
+
+```javascript
+function obtenerDatos() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const exito = true;
+      if (exito) {
+        resolve("Datos obtenidos con éxito");
+      } else {
+        reject("Error al obtener los datos");
+      }
+    }, 1000);
+  });
+}
+
+obtenerDatos()
+  .then(resultado => {
+    console.log(resultado);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+
+```
+
+**`.finally()`** : Este método se utiliza para ejecutar una función después de que la promesa se resuelva o se rechace, independientemente del resultado. Es útil para realizar tareas de limpieza o acciones que deben ocurrir sin importar el resultado de la promesa. El método .finally() toma una función de callback que se ejecuta de forma automática una vez que la promesa se establece. A diferencia de `.then()` o `.catch()`, el callback no recibe ningún argumento.
+
+```javascript
+mostrarIndicadorDeCarga();
+
+fetch('/api/datos')
+  .then(respuesta => respuesta.json())
+  .then(datos => {
+    console.log("Datos obtenidos con éxito:", datos);
+  })
+  .catch(error => {
+    console.error("Ocurrió un error:", error);
+  })
+  .finally(() => {
+    // Este código se ejecuta siempre, sin importar el éxito o fallo anterior
+    ocultarIndicadorDeCarga();
+    console.log("Operación de fetch finalizada.");
+  });
+
+```
+
+**`Promise.all(iterable)`** : Este método permite manejar múltiples promesas al mismo tiempo y resuelve una promesa una vez que todas las promesas del iterable se hayan resuelto o alguna de ellas se haya rechazado.
+
+```javascript
+const greeting = new Promise((resolve, reject) =>{
+  resolve('Hi there');
+  reject('Oops, bad greeting');
+});
+
+const updateAccount = new Promise((resolve, reject) => {
+  resolve('Updating last login...');
+  reject('Error updating account with login.');
+});
+
+const loginActivities = Promise.all([greeting, updateAccount]);
+
+loginActivities.then(res => {
+  res.forEach(activity => {
+    console.log(activity);
+  })
+})
+
+```
+
+**`Promise.race(iterable)`** : Este método resuelve una promesa tan pronto como una de las promesas en el iterable se resuelva o se rechace. Es útil cuando deseas obtener el resultado más rápido de múltiples promesas.
+
+Una promesa puede estar en los siguientes tres estados:
+
+- Pendiente (pending). Es el estado inicial al crear una promesa.
+- Resuelta con éxito (fulfilled). Estará resuelta en el momento que llamemos a resolve y, a continuación, se ejecutará la función que pasamos al método .then. Debemos de tener en cuenta que, una vez resuelta, no podremos modificar el valor de la promesa, aunque sí podríamos correr la misma instrucción para obtener un valor distinto y hacerlo las veces que deseemos.
+- Rechazada (rejected). También puede ocurrir que se complete pero sea rechazada por un error, pasando a continuación a ejecutar la función que pasamos a .catch.
+
+Veamos el siguiente ejemplo de llamada a una API: 
+
+```javascript
+
+// Llamada a una API pública
+fetch('https://typicode.com')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Error en la red');
+    }
+    return response.json(); // Convierte la respuesta a JSON
+  })
+  .then(data => {
+    console.log("Título de la tarea:", data.title);
+  })
+  .catch(error => {
+    console.error("Error al obtener los datos:", error);
+  });
+
+```
+
 ## Async y await
 
+<p><img width="1269" height="373" alt="async_await" src="https://github.com/user-attachments/assets/8de9569c-bf08-4ca2-a4df-dbf69a3af4bd" /></p>
+
+En el apartado anterior, analizamos las promesas en JavaScript. En el JavaScript moderno, es muy común utilizar **async** / **await**, que es una sintaxis más limpia (azúcar sintáctico) construida sobre las promesas. Nos permite escribir código asíncrono que parece síncrono.
+
+Para entender la diferncia entre código asíncrono y síncrono pensemos en una llamada telefónica, como ejemplo de comunicación síncrona: cuando hablamos por teléfono, la información entra y sale en secuencia, una tras otra; hacemos una pregunta, inmediatamente recibimos la respuesta. Por otra parte, una conversación online a través de algún messenger, como WhatsApp o Telegram, es un ejemplo de comunicación asíncrona: enviamos un mensaje y no nos quedamos mirando la pantalla, esperando, hasta que la otra persona responda.
+
+**¿Cómo funcionan?**
+
+**`async`**: Se coloca antes de la declaración de una función para indicar que siempre devolverá una Promesa. Si la función retorna un valor simple, JavaScript lo envuelve automáticamente en una promesa resuelta.
+
+**`await`**: Se utiliza solo dentro de una función declarada como async. Le indica a JavaScript que pause la ejecución de la función y espere a que la promesa se resuelva (o rechace) antes de pasar a la siguiente línea. Si no utilizamos await en una función asincrónica, seguramente el código se ejecutará en desorden, pues el programa continuaría leyendo mientras espera al resultado de una función no inmediata. 
+
+Veamos el siguiente ejemplo de promesa con async/await: 
+
+```javascript
+let response = await fetch(`https://api.com/api/user/${userId}`);
+let userData = await response.json();
+
+Solo puede usar await en funciones declaradas con la palabra-clave async, así que agréguela:
+
+async function getUser(userId) {
+ let response = await fetch(`https://api.com/api/user/${userId}`);
+ let userData = await response.json();
+ return userData.name; // no es necesario await en el return
+}
+
+```
+Una función declarada como async significa que el valor de retorno de la función será, "por dentro de javascript", una Promesa. Si la promesa se resuelve normalmente, el objeto-promesa retornará el valor. Si arroja una excepción, podemos usar try/catch como estamos acostumbrados en los programas síncronos.
+
+Para ejecutar la función getUser(), ya que retorna una Promesa, puedes usar await:
+
+```javascript
+exibeDatosUser(await getUser(1))
+```
+
+Recordar que await solo funciona si está dentro de otra función async. Si todavía no estás familiarizado, puedes usar `.then()` normalmente:
+
+```javascript
+getUser(1).then(exibeDadosUser).catch(reject)
+
+```
+**Buenas prácticas**
+
+Aunque `async/await` surgió como una opción de "lectura más fácil" que `.then()`, es importante tener en cuenta que estos métodos no son lógicamente equivalentes: mientras que `async/await` realiza el procesamiento secuencialmente, las promesas con .then() se procesan en paralelo , lo que hace que este método sea más rápido. async/await simplifica la escritura y la interpretación del código, pero no es tan flexible y solo funciona con una Promesa a la vez.
+
+Si necesitamos manejar varias *promesas*, pero no queremos hacerlo en paralelo, por ejemplo, si necesitamos acceder a una base de datos con miles de registros. En este caso, no queremos que todas las solicitudes se realicen en paralelo, ya que el exceso de solicitudes simultáneas puede causar problemas de rendimiento e incluso la caída del servicio.
+
+En este caso, async/await es más adecuado, ya que resolverá una *promesa* a la vez.
