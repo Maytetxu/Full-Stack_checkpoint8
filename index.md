@@ -297,9 +297,7 @@ Siguiendo estas buenas prácticas en los bucles en JavaScript, podemos escribir 
 
 ## `const`, `let` y `var` Diferencias y usos
 
-<p><img width="597" height="335" alt="var_const_let" src="https://github.com/user-attachments/assets/26830546-c978-4435-8f9a-a423e93fadfb" /><img width="876" height="652" alt="var_const_let2" src="https://github.com/user-attachments/assets/ec93d1e3-522d-488d-aacb-d8a537c4cd76" />
-<img width="876" height="652" alt="var_const_let2" src="https://github.com/user-attachments/assets/aabe0e66-1fb0-4e61-a46e-47e9ffd6577f" />
-</p>
+<p><img width="597" height="335" alt="var_const_let" src="https://github.com/user-attachments/assets/26830546-c978-4435-8f9a-a423e93fadfb" /></p>
 
 Una de las características que llegaron con ES6 es la adición de `let` y `const`, que se pueden utilizar para la declaración de variables. La pregunta es, ¿qué las hace diferentes del viejo `var` que hemos venido utilizando?.
 
