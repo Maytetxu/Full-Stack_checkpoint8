@@ -2,6 +2,9 @@
 title: Ejercicios
 nav_order: 10
 ---
+
+## **Ejercicios** 
+
 //1. Cree un bucle for en JS que imprima cada nombre en esta lista. miLista = “velma”, “exploradora”, “jane”, “john”, “harry”
 
 ```javascript
