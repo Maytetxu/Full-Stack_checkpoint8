@@ -6,7 +6,6 @@ nav_order: 7
 
 <p><img width="1164" height="525" alt="POO_JS" src="https://github.com/user-attachments/assets/afe01f15-6832-4576-9cf7-11beaab5f78f" /></p>
 
-
 Históricamente un programa era visto como un conjunto de procesos lógicos que, a partir de unos datos de entrada, se procesaban y producían unos datos de salida. La programación orientada a objetos utiliza “objetos” (estructuras de
 datos y métodos) y sus interacciones para diseñar aplicaciones. En este paradigma, cada objeto debe ser visto como una entidad con una serie de propiedades que le hacen único y que es responsable de realizar una serie de procesos
 (métodos) para los que ha sido creado, basándose un patrón o tipo común para todos los objetos de su misma clase.
