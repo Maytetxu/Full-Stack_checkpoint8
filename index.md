@@ -5,8 +5,7 @@ description: Bucles, variables, arrow function, POO y API's query
 # JavaScript
 
 ## Tipos de bucles en JavaScript
-
-<p><figure><img src=".gitbook/assets/loops_2.png" alt=""><figcaption></figcaption></figure></p>
+<p><img width="633" height="484" alt="loops_2" src="https://github.com/user-attachments/assets/52938b0d-4684-4276-a1d4-12450b75f28f" /></p>
 
 ¿Alguien recuerda el famoso castigo de las novelas de Charles Dickens donde los estudiantes tenían que escribir líneas repetidamente en una pizarra? Imaginemos que la orden "escribe esta frase 100 veces" se pudiese hacer automáticamente. Eso es exactamente lo que hacen los bucles para código.
 
@@ -298,7 +297,9 @@ Siguiendo estas buenas prácticas en los bucles en JavaScript, podemos escribir 
 
 ## `const`, `let` y `var` Diferencias y usos
 
-<p><figure><img src=".gitbook/assets/var_const_let.jpg" alt=""><figcaption></figcaption></figure></p>
+<p><img width="597" height="335" alt="var_const_let" src="https://github.com/user-attachments/assets/26830546-c978-4435-8f9a-a423e93fadfb" /><img width="876" height="652" alt="var_const_let2" src="https://github.com/user-attachments/assets/ec93d1e3-522d-488d-aacb-d8a537c4cd76" />
+<img width="876" height="652" alt="var_const_let2" src="https://github.com/user-attachments/assets/aabe0e66-1fb0-4e61-a46e-47e9ffd6577f" />
+</p>
 
 Una de las características que llegaron con ES6 es la adición de `let` y `const`, que se pueden utilizar para la declaración de variables. La pregunta es, ¿qué las hace diferentes del viejo `var` que hemos venido utilizando?.
 
@@ -319,9 +320,10 @@ El hoisting funciona de forma diferente si la declaración de la variable se rea
 En el caso de `var` el valor se inicializa a indefinido (undefined) durante la fase de creación. Sin embargo, en el caso de `let` y `const` el valor sólo se inicializa durante la fase de ejecución.
 
 <p align="center">
-  <img src=".gitbook/assets/var_const_let2.png"><br>
+  <img width="876" height="652" alt="var_const_let2" src="https://github.com/user-attachments/assets/0475dbc4-8d8a-47e3-b96b-d61f420f09c4" /><br>
   <sub>Declaración de variables, explicado con manzanas</sub>
 </p>
+
 
 #### **`var`** 
 
@@ -418,7 +420,7 @@ Aunque el uso de la declaración de variables mediante `var` se ha convertido en
 
 ## Arrow function
 
-<p><figure><img src=".gitbook/assets/arrow_function.jpg" alt=""><figcaption></figcaption></figure></p>
+<p><figure><img width="738" height="414" alt="arrow_function" src="https://github.com/user-attachments/assets/3b6dd48a-7880-483e-8755-9c253f52dca0" /><figcaption></figcaption></figure></p>
 
 Las **funciones flecha** o **arrow functions** son uno de los aspectos más importantes que debemos aprender en JavaScript moderno. Su uso está muy extendido, y si nunca las has visto o trabajado con ellas, pueden parecer un poco intimidantes.
 Su aspecto es completamente diferente al de cualquier otro tipo de declaración de función que hayamos visto si solo has usado JavaScript puro, en versiones antiguas.
@@ -664,7 +666,6 @@ En este ejemplo, deconstruimos useState y useEffect directamente desde el módul
 La deconstrucción puede ser utilizada en ciclos para iterar sobre arreglos de objetos y extraer sus propiedades de manera concisa.
 
 ```javascript
-
 
 const personas = [
   { nombre: 'Juan', edad: 30 },
