@@ -29,8 +29,7 @@ En el caso de `var` el valor se inicializa a indefinido (undefined) durante la f
   <sub>Declaración de variables, explicado con manzanas</sub>
 </p>
 
-
-#### **`var`** 
+### **`var`** 
 
 La declaración de variables usando `var` fue la forma original de declarar variables en JavaScript, lo que lo hace compatible con todas las versiones del lenguaje. En la actualidad, ésto tiene algunas limitaciones importantes, especialmente en términos de ámbito.
 
@@ -62,7 +61,7 @@ var greeting = "Hello";
 var greeting = "Hello, hello, everyone";
 ```
 
-#### **`let`** <a href="#let" id="let"></a>
+### **`let`** 
 
 `let` es ahora preferible para la declaración de variables. No es una sorpresa, ya que es una mejora de las declaraciones con `var`. También resuelve el problema con `var` que acabamos de describir. 
 
@@ -95,7 +94,7 @@ Al igual que `var`,  una variable declarada con `let` puede ser actualizada dent
 ```
 
 
-#### **`Const`**
+### **`const`**
 
 Las variables declaradas con `const` mantienen valores constantes. Las declaraciones `const` mantienen similitudes con las declaraciones `let`.
 
